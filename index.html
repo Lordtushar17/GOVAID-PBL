@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GOVAID</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+</head>
+<body background="images/bg/bodybg.jpeg">
+  <header id="header" >
+    <div class="logo">
+      <a href="index.html"><img src="images/logos/GOVAID.svg" alt="Government Schemes Logo"></a>
+    </div>
+    <div class="search-bar">
+      <a href="pages/schemes.html"><input type="text" placeholder="Don't Search for schemes..."></a>
+    </div>
+    <div class="get-started-btn">
+      <a href="pages/get_started.html">Get Started</a>
+    </div>
+  </header>
+  <!-- Slideshow container -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide"><img src="images/slidebar/image1.webp" alt="Slide 1"></div>
+      <div class="swiper-slide"><img src="images/slidebar/image2.webp" alt="Slide 2"></div>
+      <div class="swiper-slide"><img src="images/slidebar/image778.jpg" alt="Slide 3"></div>
+      <div class="swiper-slide"><img src="images/slidebar/image5.webp" alt="Slide 4"></div>
+      <div class="swiper-slide"><img src="images/slidebar/image1.webp" alt="Slide 5"></div>
+      <!-- Add more slides as needed -->
+    </div>
+    <!-- Add pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Include Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    window.onscroll = function() {stickyHeader()};
+
+    var header = document.getElementById("header");
+    var sticky = header.offsetTop;
+
+    function stickyHeader() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+
+
+
+
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 70,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var faqItems = document.querySelectorAll('.faq-item');
+    
+      faqItems.forEach(function(item) {
+        var question = item.querySelector('.faq-question');
+        var arrow = question.querySelector('.dropdown-arrow');
+        var answer = item.querySelector('.faq-answer');
+    
+        question.addEventListener('click', function() {
+          item.classList.toggle('open');
+          arrow.classList.toggle('upside-down'); // Toggle upside-down class for arrow
+        });
+      });
+    });
+    
+
+  </script>
+
+
+  <div class="additional-content">
+    <p>#GOVERNMENTSCHEMES  /  #SCHEMESFORYOU</p>
+    <a href="pages/get_started.html" class="find-schemes-btn">Find Schemes for you</a>
+  </div>
+
+  <div class="howitworks">
+    <p class="faint-text">How it works</p>
+    <h2 class="large-bold-text">Easy steps to apply for <br>Government Schemes</h2>
+  </div>
+
+  <div class="step">
+    <img src="images/icons/icon1.svg" alt="Icon 1">
+    <p>Enter Details</p>
+    <p>Start by entering your basic details!</p>
+  </div>
+
+  <div class="step">
+    <img src="images/icons/icon2.svg" alt="Icon 2">
+    <p>Search</p>
+    <p>Our search engine will find the relevant schemes!</p>
+  </div>
+
+  <div class="step">
+    <img src="images/icons/icon3.svg" alt="Icon 3">
+    <p>Select & Apply</p>
+    <p>Select and apply for the best-suited scheme</p>
+  </div>
+
+
+  <div class="landing-content">
+    <div class="about-section">
+      <h2>About</h2>
+      <p>GOVAID is a Platform that aims to offer one-stop search and discovery of the Government schemes.</p>
+      <p>It provides an innovative, technology-based solution to discover scheme information based upon the eligibility of the citizen.</p>
+      <p>The platform helps the citizen to find the right Government schemes for them. It also guides on how to apply for different Government schemes. Thus no need to visit multiple Government websites.</p>
+      
+      <!-- View More button -->
+      <a href="pages/about.html">
+      <div class="view-more-btn">
+        
+        <span>View More</span>
+        <span class="arrow">&#8594;</span>
+      </div>
+      </a>
+    </div>
+
+    <div class="video-section">
+      <iframe width="560" height="315" src="/video/Untitled video - Made with Clipchamp.mp4" frameborder="0" allowfullscreen></iframe>
+    </div>
+    
+  </div>
+ 
+  <div class="faq-section">
+    <div class="faq-image">
+      <img src="images/bg/questions.svg" alt="FAQ Image">
+    </div>
+    <div class="faq-content">
+      <h3 class="faint-text">Frequently Asked Questions</h3>
+      <h2 class="large-bold-text">Checkout our knowledge base <br>for some of your answers!</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">What is GOVAID?<span class="dropdown-arrow">&#9660;</span></div>
+          <div class="faq-answer">
+            <p>GOVAID is an e-Marketplace for Govt. schemes and services. Using GOVAID you can find various government schemes, check your eligibility, and apply for the schemes.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">How GOVAID will help common citizens?<span class="dropdown-arrow">&#9660;</span></div>
+          <div class="faq-answer">
+            <p>GOVAID will reduce the time and effort of citizens in searching for appropriate government schemes.The easy user interface of GOVAID helps common people a lot in discovering and applying for schemes.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Can I apply for the schemes through GOVAID?<span class="dropdown-arrow">&#9660;</span></div>
+          <div class="faq-answer">
+            <p>For now, the platform shall direct you to the application page of the scheme of your choice.It is envisaged that in the upcoming phases, GOVAID shall have the feature to apply for schemes / services from within the platform/ app.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">How does GOVAID How do I check for my eligibility through GOVAID?<span class="dropdown-arrow">&#9660;</span></div>
+          <div class="faq-answer">
+            <p>GOVAID offers a convenient three - step process for the citizens to discover the government schemes for which they are eligible: <br>Step 1 - The user enters his / her attributes such as demographic, income, social details, etc.<br>Step 2 - The GOVAID findsthe relevant schemes from hundreds of schemes for the user.<br>Step 3 - The user can select from the list of eligible schemes and get more information from the dedicated scheme page with detailed knowledge, FAQs, and application process and traverse to the application URL to apply.</p>
+          </div>
+        </div>
+        <!-- Add more FAQ items here -->
+      </div>
+      <a href="pages/faq.html">
+        <div class="view-more-btn">
+          
+          <span>View More</span>
+          <span class="arrow">&#8594;</span>
+        </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-item">
+        <img src="images/logos/GOVAID.svg" alt="Logo">
+        <p>@2024 GOVAID All rights reserved.</p>
+      </div>
+      <div class="footer-item">
+        <h4 class="large-bold-text">Quick Links</h4>
+        <ul>
+          <li><a href="pages/about.html">About Us</a></li>
+          <li><a href="pages/team.html">Meet The Team</a></li>
+          <li><a href="pages/faq.html">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  
+  
+  
+  
+
+
+</body>
+</html>
+
